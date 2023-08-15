@@ -24,10 +24,11 @@ class MainTabBarController : UITabBarController{
     //MARK: - controller connect
     func configureViewController(){
         
+        let layout = UICollectionViewFlowLayout()// 컬렉션 뷰로 변경하여 레이아웃 생성
         view.backgroundColor = .white
         tabBar.backgroundColor = .white
         
-        let feed = tabNavigationController(unselectedImage: #imageLiteral(resourceName: "home_unselected"), seletedImage: #imageLiteral(resourceName: "home_selected"), rootViewController: FeedController())//#imageLiteral()-> 이미지 지정
+        let feed = tabNavigationController(unselectedImage: #imageLiteral(resourceName: "home_unselected"), seletedImage: #imageLiteral(resourceName: "home_selected"), rootViewController: FeedController(collectionViewLayout: layout))//#imageLiteral()-> 이미지 지정
         let notification = tabNavigationController(unselectedImage: #imageLiteral(resourceName: "like_unselected"), seletedImage: #imageLiteral(resourceName: "love"), rootViewController: NotificationController())
         let imageSelect = tabNavigationController(unselectedImage: #imageLiteral(resourceName: "plus_unselected"), seletedImage: #imageLiteral(resourceName: "add2"), rootViewController: ImageSelectController())
         let search = tabNavigationController(unselectedImage: #imageLiteral(resourceName: "search_unselected"), seletedImage: #imageLiteral(resourceName: "search_selected"), rootViewController: SearchController())
