@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C21EF13A2A8B64F700773221 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21EF1392A8B64F700773221 /* FeedCell.swift */; };
 		C24097182A88EA33002D2FB5 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24097172A88EA33002D2FB5 /* FeedController.swift */; };
 		C240971A2A88EA49002D2FB5 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24097192A88EA49002D2FB5 /* NotificationController.swift */; };
 		C240971C2A88EA6D002D2FB5 /* ImageSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C240971B2A88EA6D002D2FB5 /* ImageSelectController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C21EF1392A8B64F700773221 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		C24097172A88EA33002D2FB5 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 		C24097192A88EA49002D2FB5 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		C240971B2A88EA6D002D2FB5 /* ImageSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		C25B74082A88A3F8003FFBF1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C21EF1392A8B64F700773221 /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				C24097182A88EA33002D2FB5 /* FeedController.swift in Sources */,
 				C24097222A890372002D2FB5 /* Extension.swift in Sources */,
 				C24097202A88EAD2002D2FB5 /* ProfileController.swift in Sources */,
+				C21EF13A2A8B64F700773221 /* FeedCell.swift in Sources */,
 				C240971C2A88EA6D002D2FB5 /* ImageSelectController.swift in Sources */,
 				C25B740E2A88A532003FFBF1 /* MainTabBarController.swift in Sources */,
 				C25B73F62A889D01003FFBF1 /* SceneDelegate.swift in Sources */,
