@@ -52,6 +52,19 @@ extension UIView{
         }
     }
     
+    func centerX(inview view: UIView, topAnchor: NSLayoutYAxisAnchor? = nil, paddingTop: CGFloat? = 0){
+       
+        translatesAutoresizingMaskIntoConstraints = false
+        centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
+        if let topAnchor = topAnchor{
+            self.topAnchor.constraint(equalTo: topAnchor, constant: paddingTop!).isActive = true
+        }
+        
+        
+    }
+    
+    
     func setDimension(height: CGFloat, width: CGFloat){
         
         translatesAutoresizingMaskIntoConstraints = false
