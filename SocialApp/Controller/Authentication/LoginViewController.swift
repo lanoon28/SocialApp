@@ -19,28 +19,18 @@ class LoginViewController: UIViewController{
         return mi
     }()
     
-    private var emailTextField: UITextField = {
+    private var emailTextField: CustomTextField = {
         
-        let et = UITextField()
-        et.textColor = .white
-        et.keyboardAppearance = .dark
+        let et = CustomTextField(placeHolder: "Email")
+        et.layer.cornerRadius = 10
         et.keyboardType = .emailAddress
-        et.backgroundColor = UIColor(white: 1, alpha: 0.4)
-        et.borderStyle = .none
-        et.attributedPlaceholder = NSAttributedString(string: "   Email", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
-        et.setHeight(50)
-        
         return et
     }()
     
-    private let passwordTextField: UITextField = {
+    private let passwordTextField: CustomTextField = {
         
-        let pt = UITextField()
-        pt.textColor = .white
-        pt.keyboardAppearance = .dark
-        pt.backgroundColor = UIColor(white: 1, alpha: 0.4)
-        pt.setHeight(50)
-        pt.attributedPlaceholder = NSAttributedString(string: "   Password", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
+        let pt = CustomTextField(placeHolder: "Password")
+        pt.layer.cornerRadius = 10
         pt.isSecureTextEntry = true
         
         return pt
@@ -59,16 +49,33 @@ class LoginViewController: UIViewController{
         return bt
     }()
     
+    private let forgotPassword: UIButton = {
+        let bt = UIButton(type: .system)
+        bt.attributedTitle(firstPart: "Forgot your password?", secondPart: "Get help signing in")
+        bt.addTarget(self, action: #selector(handleResetPassword), for: .touchUpInside)
+        
+        return bt
+    }()
+    
+    
+    private let newAccount: UIButton = {
+        let bt = UIButton(type: .system)
+        bt.attributedTitle(firstPart: "Don't have an account?", secondPart: "Sign UP")
+        bt.addTarget(self, action: #selector(handleNewAccount), for: .touchUpInside)
+        
+        return bt
+    }()
+    
+    
+    
+    
     
     //MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //view.backgroundColor = .darkGray
-        
-        //view.addSubview(emailTextField)
-        //emailTextField.anchor(top: view.topAnchor, left: view.leadingAnchor, paddingTop: 30, paddingLeft: 30)
+       
         configueUI()
         
         
@@ -93,12 +100,27 @@ class LoginViewController: UIViewController{
         mainIcon.setDimension(height: 60, width: 80)
         mainIcon.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 30)
         
-        let stackView = UIStackView(arrangedSubviews: [emailTextField, passwordTextField, loginButton])
+        let stackView = UIStackView(arrangedSubviews: [emailTextField, passwordTextField, loginButton, forgotPassword])
         stackView.axis = .vertical
         stackView.spacing = 20
         
         view.addSubview(stackView)
         stackView.anchor(top: mainIcon.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 30, paddingLeft: 30, paddingRight: 30)
     
+        view.addSubview(newAccount)
+        newAccount.centerX(inview: view)
+        newAccount.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
+        
     }
+    
+    
+    @objc func handleResetPassword(){
+        
+    }
+    
+    @objc func handleNewAccount(){
+        
+    }
+
+    
 }
